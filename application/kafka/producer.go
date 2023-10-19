@@ -3,14 +3,16 @@ package kafka
 import (
 	"fmt"
 
+	"os"
+
 	ckafka "github.com/confluentinc/confluent-kafka-go/kafka"
 )
 
 func NewKafkaProducer() *ckafka.Producer {
-	ConfigMap := &ckafka.ConfigMap{
-		"bootstrap.servers": "kafka:9092",
+	configMap := &ckafka.ConfigMap{
+		"bootstrap.servers": os.Getenv("kafkaBootstrapServers"),
 	}
-	p, err := ckafka.NewProducer(ConfigMap)
+	p, err := ckafka.NewProducer(configMap)
 	if err != nil {
 		panic(err)
 	}
@@ -27,7 +29,6 @@ func Publish(msg string, topic string, producer *ckafka.Producer, deliveryChan c
 		return err
 	}
 	return nil
-
 }
 
 func DeliveryReport(deliveryChan chan ckafka.Event) {

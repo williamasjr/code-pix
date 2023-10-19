@@ -3,8 +3,8 @@ package repository
 import (
 	"fmt"
 
+	"github.com/jinzhu/gorm"
 	"github.com/williamasjr/code-pix-go/domain/model"
-	"gorm.io/gorm"
 )
 
 type TransactionRepositoryDb struct {
