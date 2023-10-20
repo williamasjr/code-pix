@@ -90,7 +90,7 @@ func _PixService_RegisterPixKey_Handler(srv interface{}, ctx context.Context, de
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/github.com.codeedu.codepix.PixService/RegisterPixKey",
+		FullMethod: "/github.com.williamasjr.codepix.PixService/RegisterPixKey",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(PixServiceServer).RegisterPixKey(ctx, req.(*PixKeyRegistration))
@@ -108,7 +108,7 @@ func _PixService_Find_Handler(srv interface{}, ctx context.Context, dec func(int
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/github.com.codeedu.codepix.PixService/Find",
+		FullMethod: "/github.com.williamasjr.codepix.PixService/Find",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(PixServiceServer).Find(ctx, req.(*PixKey))
@@ -120,7 +120,7 @@ func _PixService_Find_Handler(srv interface{}, ctx context.Context, dec func(int
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
 var PixService_ServiceDesc = grpc.ServiceDesc{
-	ServiceName: "github.com.codeedu.codepix.PixService",
+	ServiceName: "github.com.williamasjr.codepix.PixService",
 	HandlerType: (*PixServiceServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{

@@ -445,18 +445,18 @@ func file_pixkey_proto_rawDescGZIP() []byte {
 
 var file_pixkey_proto_msgTypes = make([]protoimpl.MessageInfo, 5)
 var file_pixkey_proto_goTypes = []interface{}{
-	(*PixKeyRegistration)(nil),  // 0: github.com.codeedu.codepix.PixKeyRegistration
-	(*PixKey)(nil),              // 1: github.com.codeedu.codepix.PixKey
-	(*Account)(nil),             // 2: github.com.codeedu.codepix.Account
-	(*PixKeyInfo)(nil),          // 3: github.com.codeedu.codepix.PixKeyInfo
-	(*PixKeyCreatedResult)(nil), // 4: github.com.codeedu.codepix.PixKeyCreatedResult
+	(*PixKeyRegistration)(nil),  // 0: github.com.williamasjr.codepix.PixKeyRegistration
+	(*PixKey)(nil),              // 1: github.com.williamasjr.codepix.PixKey
+	(*Account)(nil),             // 2: github.com.williamasjr.codepix.Account
+	(*PixKeyInfo)(nil),          // 3: github.com.williamasjr.codepix.PixKeyInfo
+	(*PixKeyCreatedResult)(nil), // 4: github.com.williamasjr.codepix.PixKeyCreatedResult
 }
 var file_pixkey_proto_depIdxs = []int32{
-	2, // 0: github.com.codeedu.codepix.PixKeyInfo.account:type_name -> github.com.codeedu.codepix.Account
-	0, // 1: github.com.codeedu.codepix.PixService.RegisterPixKey:input_type -> github.com.codeedu.codepix.PixKeyRegistration
-	1, // 2: github.com.codeedu.codepix.PixService.Find:input_type -> github.com.codeedu.codepix.PixKey
-	4, // 3: github.com.codeedu.codepix.PixService.RegisterPixKey:output_type -> github.com.codeedu.codepix.PixKeyCreatedResult
-	3, // 4: github.com.codeedu.codepix.PixService.Find:output_type -> github.com.codeedu.codepix.PixKeyInfo
+	2, // 0: github.com.williamasjr.codepix.PixKeyInfo.account:type_name -> github.com.williamasjr.codepix.Account
+	0, // 1: github.com.williamasjr.codepix.PixService.RegisterPixKey:input_type -> github.com.williamasjr.codepix.PixKeyRegistration
+	1, // 2: github.com.williamasjr.codepix.PixService.Find:input_type -> github.com.williamasjr.codepix.PixKey
+	4, // 3: github.com.williamasjr.codepix.PixService.RegisterPixKey:output_type -> github.com.williamasjr.codepix.PixKeyCreatedResult
+	3, // 4: github.com.williamasjr.codepix.PixService.Find:output_type -> github.com.williamasjr.codepix.PixKeyInfo
 	3, // [3:5] is the sub-list for method output_type
 	1, // [1:3] is the sub-list for method input_type
 	1, // [1:1] is the sub-list for extension type_name
