@@ -32,7 +32,7 @@ func NewPixServiceClient(cc grpc.ClientConnInterface) PixServiceClient {
 
 func (c *pixServiceClient) RegisterPixKey(ctx context.Context, in *PixKeyRegistration, opts ...grpc.CallOption) (*PixKeyCreatedResult, error) {
 	out := new(PixKeyCreatedResult)
-	err := c.cc.Invoke(ctx, "/github.com.codeedu.codepix.PixService/RegisterPixKey", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/github.com.williamasjr.codepix.PixService/RegisterPixKey", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -41,7 +41,7 @@ func (c *pixServiceClient) RegisterPixKey(ctx context.Context, in *PixKeyRegistr
 
 func (c *pixServiceClient) Find(ctx context.Context, in *PixKey, opts ...grpc.CallOption) (*PixKeyInfo, error) {
 	out := new(PixKeyInfo)
-	err := c.cc.Invoke(ctx, "/github.com.codeedu.codepix.PixService/Find", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/github.com.williamasjr.codepix.PixService/Find", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
