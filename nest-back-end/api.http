@@ -1,0 +1,27 @@
+GET http://localhost:3000/bank-accounts
+
+@bank_acount_id = 2e599290-80f6-4603-8a53-e1386b7fc236
+
+###
+GET http://localhost:3000/bank-accounts/{{bank_acount_id}}
+
+###
+POST http://localhost:3000/bank-accounts
+Content-Type: application/json
+
+{
+    "account_number": "1111-1",
+    "owner_name": "John Doe"
+}
+
+###
+GET http://localhost:3000/bank-accounts/{{bank_acount_id}}/pix-keys
+
+###
+POST http://localhost:3000/bank-accounts/{{bank_acount_id}}/pix-keys
+Content-Type: application/json
+
+{
+    "kind": "email",
+    "key": "user1@email.com"
+}
