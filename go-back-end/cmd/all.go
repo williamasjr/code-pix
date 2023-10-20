@@ -8,9 +8,9 @@ import (
 
 	ckafka "github.com/confluentinc/confluent-kafka-go/kafka"
 	"github.com/spf13/cobra"
-	"github.com/williamasjr/code-pix-go/application/grpc"
-	"github.com/williamasjr/code-pix-go/application/kafka"
-	"github.com/williamasjr/code-pix-go/infra/db"
+	"github.com/williamasjr/codepix-go/application/grpc"
+	"github.com/williamasjr/codepix-go/application/kafka"
+	"github.com/williamasjr/codepix-go/infra/db"
 )
 
 var (

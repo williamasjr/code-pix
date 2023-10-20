@@ -6,11 +6,11 @@ import (
 
 	ckafka "github.com/confluentinc/confluent-kafka-go/kafka"
 	"github.com/jinzhu/gorm"
-	"github.com/williamasjr/code-pix-go/application/factory"
-	"github.com/williamasjr/code-pix-go/application/usecase"
+	"github.com/williamasjr/codepix-go/application/factory"
+	"github.com/williamasjr/codepix-go/application/usecase"
 
-	appmodel "github.com/williamasjr/code-pix-go/application/model"
-	"github.com/williamasjr/code-pix-go/domain/model"
+	appmodel "github.com/williamasjr/codepix-go/application/model"
+	"github.com/williamasjr/codepix-go/domain/model"
 )
 
 type KafkaProcessor struct {

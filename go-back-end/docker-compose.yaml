@@ -9,7 +9,7 @@ services:
       - "host.docker.internal:host-gateway"
 
   db:
-    image: postgres:13-alpine
+    image: postgres:9.4
     restart: always
     tty: true
     volumes:

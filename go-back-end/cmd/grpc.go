@@ -18,8 +18,8 @@ package cmd
 import (
 	"os"
 
-	"github.com/williamasjr/code-pix-go/application/grpc"
-	"github.com/williamasjr/code-pix-go/infra/db"
+	"github.com/williamasjr/codepix-go/application/grpc"
+	"github.com/williamasjr/codepix-go/infra/db"
 
 	"github.com/spf13/cobra"
 )

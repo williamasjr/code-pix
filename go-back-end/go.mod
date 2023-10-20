@@ -1,4 +1,4 @@
-module github.com/williamasjr/code-pix-go
+module github.com/williamasjr/codepix-go
 
 go 1.15
 
