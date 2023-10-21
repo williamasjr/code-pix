@@ -1,24 +1,28 @@
 import { Module } from '@nestjs/common';
 import { PixKeysService } from './pix-keys.service';
 import { PixKeysController } from './pix-keys.controller';
-import { TypeOrmModule } from '@nestjs/typeorm';
 import { PixKey } from './entities/pix-key.entity';
-import { BankAccount } from 'src/bank-accounts/entities/bank-account.entity';
+import { TypeOrmModule } from '@nestjs/typeorm';
+import { BankAccount } from '../bank-accounts/entities/bank-account.entity';
 import { ClientsModule, Transport } from '@nestjs/microservices';
 import { join } from 'path';
+import { ConfigService } from '@nestjs/config';
 
 @Module({
   imports: [
     TypeOrmModule.forFeature([PixKey, BankAccount]),
-    ClientsModule.register([
+    ClientsModule.registerAsync([
       {
         name: 'PIX_PACKAGE',
-        transport: Transport.GRPC,
-        options: {
-          url: 'host.docker.internal:50051',
-          package: 'github.com.williamasjr.codepix',
-          protoPath: join(__dirname, 'proto', 'pix.proto'),
-        },
+        useFactory: (configService: ConfigService) => ({
+          transport: Transport.GRPC,
+          options: {
+            url: configService.get('GRPC_URL'),
+            package: 'github.com.williamasjr.codepix',
+            protoPath: [join(__dirname, 'proto/pix.proto')],
+          },
+        }),
+        inject: [ConfigService],
       },
     ]),
   ],
